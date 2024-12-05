@@ -15,7 +15,7 @@ public class Contraseñas {
     private static String CUSTOM = "";
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int longitud,nContras=0,contador,opcion;  
+        int longitud,nContras=0,contador=0,opcion;  
         
                 boolean incluirMayusculas = false;
                 boolean incluirNumeros = false;
@@ -23,6 +23,7 @@ public class Contraseñas {
                 boolean incluirCustom = false;
         
         do{
+            if(contador == 0){
             System.out.println("***|GENERADOR DE CONTRASEÑAS|***");
             System.out.println("Bienvenido usuario, ingrese una opcion");
             System.out.println("1.- Incluir Mayusculas y Minusculas");
@@ -31,7 +32,15 @@ public class Contraseñas {
             System.out.println("4.- Incluir Caracteres personalizados");
             System.out.println("5.- Salir del programa");
             opcion = sc.nextInt();
-           
+           contador ++;
+            }
+            else
+            {
+                System.out.println("Esa no es una opcion valida");
+                System.out.println("Ingresa una opcion valida:");
+                opcion = sc.nextInt();
+            }
+            
         }while(opcion<=0 || opcion>5);
         
         switch(opcion){
