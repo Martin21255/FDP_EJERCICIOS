@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package Unidad5;
-        import java.util.Scanner;
+import java.util.Scanner;
 
 /**
  *
@@ -17,20 +17,18 @@ public class Ejercicio11 {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-
-        // Solicitar el tamaño de la matriz
+        int n;
+        int[][] matriz;
+        
         System.out.println("Ingrese el tamaño de la matriz (N):");
-        int n = scanner.nextInt();
-
-        // Inicializar y llenar la matriz
-        int[][] matriz = new int[n][n];
+        n = scanner.nextInt();
+        
+        matriz = new int[n][n];
         System.out.println("Ingrese los elementos de la matriz:");
         llenarMatriz(matriz, scanner);
 
-        // Verificar si la matriz es simétrica
         boolean esSimetrica = esMatrizSimetrica(matriz);
 
-        // Mostrar el resultado
         if (esSimetrica) {
             System.out.println("La matriz es simetrica.");
         } else {

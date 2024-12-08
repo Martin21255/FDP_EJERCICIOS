@@ -19,31 +19,25 @@ public class Ejercicio14 {
     public static void main(String[] args) {
        
         Scanner scanner = new Scanner(System.in);
-
-        // Solicitar el número de alumnos
+        int n;
+        double[][] calificaciones;
         System.out.println("Ingrese el numero de alumnos:");
-        int n = scanner.nextInt();
+        n = scanner.nextInt();
 
-        // Inicializar el arreglo de calificaciones
-        double[][] calificaciones = new double[n][4];
+        calificaciones = new double[n][4];
 
-        // Llenar el arreglo con las calificaciones
         System.out.println("Ingrese las calificaciones de los alumnos:");
         llenarCalificaciones(calificaciones, scanner);
 
-        // Calcular y mostrar el promedio de cada alumno
         System.out.println("Promedio de cada alumno:");
         calcularPromedioAlumnos(calificaciones);
 
-        // Calcular y mostrar el promedio del grupo en cada examen
         System.out.println("Promedio del grupo en cada examen:");
         calcularPromedioExamenes(calificaciones);
 
-        // Calcular y mostrar el examen con mayor promedio
         int examenMayorPromedio = calcularExamenMayorPromedio(calificaciones);
         System.out.println("El examen con mayor promedio es el Examen " + (examenMayorPromedio + 1));
 
-        // Calcular y mostrar el número de alumnos aprobados en cada examen
         System.out.println("Número de alumnos aprobados en cada examen:");
         calcularAprobadosExamenes(calificaciones);
     }

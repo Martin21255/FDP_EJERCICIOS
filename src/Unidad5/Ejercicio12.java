@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package Unidad5;
-
 import java.util.Scanner;
 
 
@@ -18,18 +17,15 @@ public class Ejercicio12 {
      */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
-        // Solicitar el tamaño de la matriz
+        int n;
+        int[][] matriz;
         System.out.println("Ingrese el tamano de la matriz (N):");
-        int n = scanner.nextInt();
+        n = scanner.nextInt();
 
-        // Inicializar la matriz
-        int[][] matriz = new int[n][n];
+        matriz = new int[n][n];
 
-        // Llenar la matriz con 1 en las diagonales y 0 en el resto
         llenarMatriz(matriz);
 
-        // Imprimir la matriz
         imprimirMatriz(matriz);
     }
 

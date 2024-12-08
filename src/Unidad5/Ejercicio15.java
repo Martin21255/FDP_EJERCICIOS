@@ -15,9 +15,9 @@ public class Ejercicio15 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
-
-        // Inicializar la matriz con el número de visitantes
+    int[] totalVisitantes;
+    int[] masMenosVisitado;
+    int[] afluenciaMeses;
         int[][] visitantes = {
             {12000, 15000, 16000, 17000, 18000, 19000},
             {8000, 9000, 10000, 11000, 12000, 13000},
@@ -31,28 +31,22 @@ public class Ejercicio15 {
             {5000, 6000, 7000, 8000, 9000, 10000}
         };
 
-        // Calcular el total de visitantes por centro turístico
-        int[] totalVisitantes = calcularTotalVisitantes(visitantes);
+        totalVisitantes = calcularTotalVisitantes(visitantes);
 
-        // Imprimir el total de visitantes por centro turístico
         System.out.println("Total de visitantes por centro turistico:");
         for (int i = 0; i < totalVisitantes.length; i++) {
             System.out.println("Centro turistico " + (i + 1) + ": " + totalVisitantes[i]);
         }
 
-        // Determinar los centros turísticos más y menos visitados
-        int[] masMenosVisitado = calcularMasMenosVisitado(totalVisitantes);
+        masMenosVisitado = calcularMasMenosVisitado(totalVisitantes);
 
-        // Imprimir los resultados
         System.out.println("\nCentro turistico mas visitado: Centro " + (masMenosVisitado[0] + 1) + " con " + totalVisitantes[masMenosVisitado[0]] + " visitantes.");
         System.out.println("Centro turistico menos visitado: Centro " + (masMenosVisitado[1] + 1) + " con " + totalVisitantes[masMenosVisitado[1]] + " visitantes.");
         System.out.println("Mes con mas visitantes del centro turístico más visitado: Mes " + (calcularMesMasVisitantes(visitantes, masMenosVisitado[0]) + 1));
         System.out.println("Mes con mas visitantes del centro turístico menos visitado: Mes " + (calcularMesMasVisitantes(visitantes, masMenosVisitado[1]) + 1));
 
-        // Calcular los meses con mayor y menor afluencia turística
-        int[] afluenciaMeses = calcularAfluenciaMeses(visitantes);
+        afluenciaMeses = calcularAfluenciaMeses(visitantes);
 
-        // Imprimir los resultados
         System.out.println("\nMes con mayor afluencia turistica: Mes " + (afluenciaMeses[0] + 1) + " con " + afluenciaMeses[2] + " visitantes.");
         System.out.println("Mes con menor afluencia turistica: Mes " + (afluenciaMeses[1] + 1) + " con " + afluenciaMeses[3] + " visitantes.");
     }
@@ -92,7 +86,7 @@ public class Ejercicio15 {
     }
 
     public static int[] calcularAfluenciaMeses(int[][] visitantes) {
-        int[] afluencia = new int[4]; // [mayorMes, menorMes, mayorVisitantes, menorVisitantes]
+        int[] afluencia = new int[4]; 
         afluencia[2] = 0;
         afluencia[3] = Integer.MAX_VALUE;
 

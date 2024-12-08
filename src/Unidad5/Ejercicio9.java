@@ -3,8 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package Unidad5;
-
-import Unidad4.*;
 import java.util.Scanner;
 
 /**
@@ -37,7 +35,6 @@ public class Ejercicio9 {
 
     public static int[][] llenarMatriz(int[][] matriz) {
         Scanner lector = new Scanner(System.in);
-        //Ingreso de valores en la matriz
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[0].length; j++) {
                 System.out.println("Ingrese elemento (" + (i + 1) + "," + (j + 1) + "): ");
@@ -51,16 +48,11 @@ public class Ejercicio9 {
         int[][] matriz;
         int numMayor, numMenor;
 
-        //Se define el tamaño de la matriz mediante la invocación de la función setTamanioMatriz()
         matriz = setTamanioMatriz();
 
-        //Se ingresan valores en la matriz invocando la función llenarMatriz()
         matriz = llenarMatriz(matriz);
 
-        //Ciclos para obtener el elemento mayor y menor de cada fila
         for (int i = 0; i < matriz.length; i++) {
-            //Se asignan valores iniciales a las variables que almacenarán el valor mayor
-            //y el valor menor, cada vez que se pasa a una nueva fila
             numMayor = matriz[i][0];
             numMenor = matriz[i][0];
             for (int j = 0; j < matriz[0].length; j++) {
@@ -73,17 +65,16 @@ public class Ejercicio9 {
             }
             System.out.println("Fila " + (i + 1) + " - Mayor: " + numMayor + ", Menor: " + numMenor);
 
-            // y el valor menor, cada vez que se pasa a una nueva fila
             numMenor = matriz[i][0];
             numMayor = matriz[i][0];
 
             for (int j = 1; j < matriz[0].length; j++) {
-                if (matriz[i][j] > numMayor) // Se comparan los valores de cada elemento para obtener el mayor
+                if (matriz[i][j] > numMayor) 
                 {
                     numMayor = matriz[i][j];
                 }
 
-                if (matriz[i][j] < numMenor) // Se comparan los valores de cada elemento para obtener el menor
+                if (matriz[i][j] < numMenor) 
                 {
                     numMenor = matriz[i][j];
                 }

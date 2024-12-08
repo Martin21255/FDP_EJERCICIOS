@@ -17,24 +17,20 @@ public class Ejercicio6 {
      */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
-        // Solicitar el tamaño del arreglo
+        int n,valor,resultado;
+        int[] arreglo;
+        
         System.out.println("Ingrese el tamano del arreglo:");
-        int n = scanner.nextInt();
-
-        // Inicializar y llenar el arreglo
-        int[] arreglo = new int[n];
+        n = scanner.nextInt();
+        
+        arreglo = new int[n];
         System.out.println("Ingrese los elementos del arreglo:");
         llenarArreglo(arreglo, scanner);
-
-        // Solicitar el valor a buscar
+     
         System.out.println("Ingrese el valor a buscar:");
-        int valor = scanner.nextInt();
+        valor = scanner.nextInt();
+        resultado = busquedaBinaria(arreglo, valor);
 
-        // Realizar la búsqueda binaria
-        int resultado = busquedaBinaria(arreglo, valor);
-
-        // Mostrar el resultado
         if (resultado == -1) {
             System.out.println("El valor no se encuentra en el arreglo.");
         } else {
@@ -55,21 +51,17 @@ public class Ejercicio6 {
         while (izquierda <= derecha) {
             int medio = izquierda + (derecha - izquierda) / 2;
 
-            // Verificar si el valor está en el medio
             if (arreglo[medio] == valor) {
                 return medio;
             }
 
-            // Si el valor es mayor, ignorar la mitad izquierda
             if (arreglo[medio] < valor) {
                 izquierda = medio + 1;
             } else {
-                // Si el valor es menor, ignorar la mitad derecha
                 derecha = medio - 1;
             }
         }
 
-        // Si el valor no está presente en el arreglo
         return -1;
     }
 }

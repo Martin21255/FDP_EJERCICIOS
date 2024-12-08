@@ -15,7 +15,6 @@ public class Ejercicio8 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // Inicializar la matriz con valores predefinidos
         int[][] matriz = {
             {1, 2, 3, 4, 5, 6},
             {7, 8, 9, 10, 11, 12},
@@ -24,11 +23,9 @@ public class Ejercicio8 {
             {25, 26, 27, 28, 29, 30},
             {31, 32, 33, 34, 35, 36}
         };
+        int[] sumas;
+        sumas = sumarColumnas(matriz);
 
-        // Calcular la suma de las columnas
-        int[] sumas = sumarColumnas(matriz);
-
-        // Imprimir el resultado
         System.out.println("Suma de cada columna:");
         for (int i = 0; i < sumas.length; i++) {
             System.out.println("Columna " + (i + 1) + ": " + sumas[i]);

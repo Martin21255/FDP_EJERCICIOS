@@ -15,7 +15,6 @@ public class Ejercicio13 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // Definir la matriz de 4x5 con elementos fijos de tipo String
         String[][] matriz = {
             {"La", "vida", "no", "es", "la"},
             {"momentos", "que", "te", "dejan", "cantidad"},
@@ -23,11 +22,9 @@ public class Ejercicio13 {
             {"sino", ",", "respiras", "que", "veces"}
         };
 
-        // Imprimir la matriz por filas
         System.out.println("Impresión por filas:");
         imprimirPorFilas(matriz);
 
-        // Imprimir la matriz en espiral
         System.out.println("\nImpresión en espiral:");
         imprimirEnEspiral(matriz);
     }

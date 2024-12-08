@@ -16,16 +16,14 @@ public class Ejercicio2 {
      */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
-        // Solicitar el número de elementos
+        int n;
+        int[] arreglo;
+        
         System.out.println("Ingrese el numero de elementos:");
-        int n = scanner.nextInt();
+        n = scanner.nextInt();
+        arreglo = new int[n];
         
-        // Crear un arreglo para almacenar los elementos
-        int[] arreglo = new int[n];
-        
-        // Ingresar los elementos en el arreglo
-        
+
         for (int i = 0; i < n; i++) {
             System.out.println("Ingrese el elemento "+"("+(i+1)+")"+" del arreglo:");
             arreglo[i] = scanner.nextInt();

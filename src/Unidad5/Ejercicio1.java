@@ -3,8 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package Unidad5;
-
-import Unidad4.*;
 import java.util.Scanner;
 
 /**

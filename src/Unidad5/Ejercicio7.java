@@ -16,34 +16,30 @@ public class Ejercicio7 {
      */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
-        // Solicitar el número de alumnos
+        int n,moda;
+        double media,varianza,desviacionEstandar;
+        int[] calificaciones;
+        
         System.out.println("Ingrese el numero de alumnos:");
-        int n = scanner.nextInt();
+        n = scanner.nextInt();
 
-        // Inicializar el arreglo de calificaciones
-        int[] calificaciones = new int[n];
+        calificaciones = new int[n];
 
-        // Llenar el arreglo con las calificaciones
         System.out.println("Ingrese las calificaciones:");
         for (int i = 0; i < n; i++) {
             calificaciones[i] = scanner.nextInt();
         }
 
-        // Calcular y mostrar la media aritmética
-        double media = calcularMedia(calificaciones);
+        media = calcularMedia(calificaciones);
         System.out.println("Media aritmetica: " + media);
 
-        // Calcular y mostrar la varianza
-        double varianza = calcularVarianza(calificaciones, media);
+        varianza = calcularVarianza(calificaciones, media);
         System.out.println("Varianza: " + varianza);
 
-        // Calcular y mostrar la desviación estándar
-        double desviacionEstandar = Math.sqrt(varianza);
+        desviacionEstandar = Math.sqrt(varianza);
         System.out.println("Desviacion estandar: " + desviacionEstandar);
 
-        // Calcular y mostrar la moda
-        int moda = calcularModa(calificaciones);
+        moda = calcularModa(calificaciones);
         System.out.println("Moda: " + moda);
     }
 

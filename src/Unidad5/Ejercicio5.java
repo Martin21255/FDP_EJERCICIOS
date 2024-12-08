@@ -18,27 +18,29 @@ public class Ejercicio5 {
      */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
-        // Solicitar el tamaño de los arreglos
+        int n,m;
+        int[] arreglo1;
+        int[] arreglo2;
+        int[] arregloMezclado;
         System.out.println("Ingrese el tamano del primer arreglo:");
-        int n = scanner.nextInt();
+        n = scanner.nextInt();
         System.out.println("Ingrese el tamano del segundo arreglo:");
-        int m = scanner.nextInt();
+        m = scanner.nextInt();
 
-        // Inicializar los arreglos
-        int[] arreglo1 = new int[n];
-        int[] arreglo2 = new int[m];
+      
+        arreglo1 = new int[n];
+        arreglo2 = new int[m];
 
-        // Llenar los arreglos con datos del usuario
+        
         System.out.println("Ingrese los elementos del primer arreglo:");
         llenarArreglo(arreglo1, scanner);
         System.out.println("Ingrese los elementos del segundo arreglo:");
         llenarArreglo(arreglo2, scanner);
 
-        // Mezclar y ordenar los arreglos
-        int[] arregloMezclado = mezclarYOrdenar(arreglo1, arreglo2);
+        
+        arregloMezclado = mezclarYOrdenar(arreglo1, arreglo2);
 
-        // Imprimir el arreglo resultado
+        
         System.out.println("Arreglo mezclado y ordenado:");
         imprimirArreglo(arregloMezclado);
     }
